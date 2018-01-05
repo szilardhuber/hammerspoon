@@ -1,6 +1,7 @@
 gridSize = 6
 
 left = function(width)
+  if width > gridSize then width = gridSize end
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
@@ -14,6 +15,7 @@ left = function(width)
 end
 
 right = function(width)
+  if width > gridSize then width = gridSize end
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
@@ -44,6 +46,15 @@ end)
 hs.hotkey.bind({"cmd", "alt"}, "6", function()
   left(6)
 end)
+hs.hotkey.bind({"cmd", "alt"}, "7", function()
+  left(7)
+end)
+hs.hotkey.bind({"cmd", "alt"}, "8", function()
+  left(8)
+end)
+hs.hotkey.bind({"cmd", "alt"}, "9", function()
+  left(9)
+end)
 
 hs.hotkey.bind({"cmd", "alt", "shift"}, "1", function()
   right(1)
@@ -62,5 +73,14 @@ hs.hotkey.bind({"cmd", "alt", "shift"}, "5", function()
 end)
 hs.hotkey.bind({"cmd", "alt", "shift"}, "6", function()
   right(6)
+end)
+hs.hotkey.bind({"cmd", "alt", "shift"}, "7", function()
+  right(7)
+end)
+hs.hotkey.bind({"cmd", "alt", "shift"}, "8", function()
+  right(8)
+end)
+hs.hotkey.bind({"cmd", "alt", "shift"}, "9", function()
+  right(9)
 end)
 
